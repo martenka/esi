@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-TaskServiceApplication<task_service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "ee.tasky.task_service.TaskServiceApplication",
+      "projectName": "task_service",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

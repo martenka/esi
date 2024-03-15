@@ -1,10 +1,10 @@
-package com.ut.esi;
+package ee.tasky.task_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EsiApplicationTests {
+class TaskServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

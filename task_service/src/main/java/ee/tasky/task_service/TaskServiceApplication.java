@@ -1,13 +1,15 @@
-package com.ut.esi;
+package ee.tasky.task_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EsiApplication {
+public class TaskServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EsiApplication.class, args);
+		DatabaseInitializer.initialize("taskservice_db");
+
+		SpringApplication.run(TaskServiceApplication.class, args);
 	}
 
 }
