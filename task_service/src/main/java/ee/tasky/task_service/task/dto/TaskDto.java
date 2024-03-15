@@ -9,7 +9,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ee.tasky.task_service.project.model.Project;
 
 @Builder
 @Data
@@ -18,7 +17,7 @@ import ee.tasky.task_service.project.model.Project;
 public class TaskDto {
 
     @Id
-    private long id;
+    private int id;
 
     private String description;
     private String title;
@@ -30,5 +29,4 @@ public class TaskDto {
     private Date created_at;
     private Date modified_at;
 
-    private Project project;
 }

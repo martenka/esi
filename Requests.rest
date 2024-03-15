@@ -21,3 +21,6 @@ Content-Type: application/json
 
 ### Delete Task
 DELETE http://localhost:8080/api/tasks/5
+
+### Get Project
+GET http://localhost:8080/api/projects
