@@ -1,7 +1,9 @@
-package main.java.ee.tasky.task_service.task.repository;
+package ee.tasky.task_service.task.repository;
 
-import com.esi.inventoryservice.inventory.model.InventoryItem;
+import org.springframework.data.repository.CrudRepository;
 
-public class TaskRepository extends CrudRepository<Task, String> {
+import ee.tasky.task_service.task.model.Task;
+
+public interface TaskRepository extends CrudRepository<Task, Integer> {
 
 }

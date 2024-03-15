@@ -1,14 +1,15 @@
-package main.java.ee.tasky.task_service.task.dto;
+package ee.tasky.task_service.task.dto;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
+import ee.tasky.task_service.task.model.Priority;
+import ee.tasky.task_service.task.model.Status;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import main.java.ee.tasky.task_service.task.model.Project;
+import ee.tasky.task_service.project.model.Project;
 
 @Builder
 @Data

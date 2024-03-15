@@ -1,6 +1,9 @@
-package main.java.ee.tasky.task_service.task.model;
+package ee.tasky.task_service.task.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.ManyToOne;
@@ -10,13 +13,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Date;
 
-enum Priority {
-    LOW, MEDIUM, HIGH
-}
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
-enum Status {
-    OPEN, IN_PROGRESS, ON_HOLD, DONE, CLOSED
-}
+import ee.tasky.task_service.project.model.Project;
 
 @Entity
 @Table(name = "tasktable")
@@ -39,9 +39,11 @@ public class Task {
     private Date dueDate;
 
     @Column(name = "created_at", nullable = false)
+    @CreationTimestamp
     private Date createdAt;
 
     @Column(name = "modified_at")
+    @UpdateTimestamp
     private Date modifiedAt;
 
     @ManyToOne

@@ -1,30 +1,28 @@
-package com.esi.inventoryservice;
+package ee.tasky.task_service;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.esi.inventoryservice.inventory.model.InventoryItem;
-import com.esi.inventoryservice.inventory.repository.InventoryRepository;
+import ee.tasky.task_service.task.model.Priority;
+import ee.tasky.task_service.task.model.Status;
+import ee.tasky.task_service.task.model.Task;
+import ee.tasky.task_service.task.repository.TaskRepository;
 
 @Configuration
 public class DataInitializer {
 
     @Bean
-    public CommandLineRunner loadData(InventoryRepository inventoryRepository) {
+    public CommandLineRunner loadData(TaskRepository taskRepository) {
         return args -> {
-            // InventoryItem inventoryItem1 = new InventoryItem();
-            // inventoryItem1.setId("01");
-            // inventoryItem1.setCode("p-109-09");
-            // inventoryItem1.setQuantity(100);
 
-            // InventoryItem inventoryItem2 = new InventoryItem();
-            // inventoryItem2.setId("02");
-            // inventoryItem2.setCode("p-109-10");
-            // inventoryItem2.setQuantity(0);
+            Task task1 = new Task();
+            task1.setTitle("Task 1");
+            task1.setDescription("Description for task 1");
+            task1.setPriority(Priority.LOW);
+            task1.setStatus(Status.OPEN);
+            taskRepository.save(task1);
 
-            // inventoryRepository.save(inventoryItem1);
-            // inventoryRepository.save(inventoryItem2);
         };
     }
 
