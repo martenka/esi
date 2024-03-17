@@ -10,8 +10,17 @@ Content-Type: application/json
   "description": "Description 1"
 }
 
-### Update Task
+### Update NonExistent Task
 PUT http://localhost:8080/api/tasks/6
+Content-Type: application/json
+
+{
+  "title": "Updated Task",
+  "description": "Updated Description"
+}
+
+### Update Existing Task
+PUT http://localhost:8080/api/tasks/2
 Content-Type: application/json
 
 {
@@ -24,3 +33,29 @@ DELETE http://localhost:8080/api/tasks/5
 
 ### Get Project
 GET http://localhost:8080/api/projects
+
+### Get Existing Project
+GET http://localhost:8080/api/projects/1
+
+### Delete Project
+DELETE http://localhost:8080/api/projects/1
+
+### Update Existing Project
+PUT http://localhost:8080/api/projects/1
+Content-Type: application/json
+
+{
+  "title": "Updated Project",
+  "description": "Updated Description"
+}
+
+### Create Project
+POST http://localhost:8080/api/projects
+Content-Type: application/json
+
+{
+  "title": "Project 2",
+  "description": "Description about project 2",
+  "startDate": "2024-03-17T10:42:00.979Z",
+  "endDate": "2024-03-20T10:42:00.979Z"
+}

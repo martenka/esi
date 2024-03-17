@@ -4,19 +4,16 @@ import java.util.Date;
 
 import ee.tasky.task_service.task.model.Priority;
 import ee.tasky.task_service.task.model.Status;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@Builder
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaskDto {
+public class TaskDto extends TaskDataDto {
 
-    @Id
     private int id;
 
     private String description;
@@ -28,5 +25,6 @@ public class TaskDto {
 
     private Date created_at;
     private Date modified_at;
-
 }
+
+
